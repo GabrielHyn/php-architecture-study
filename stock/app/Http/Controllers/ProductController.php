@@ -10,10 +10,10 @@ class ProductController extends Controller
     {
         $html = '<h1>Product Listing with Laravel</h1>';
         $html .= '<ul>';
-        $products = DB::select('select * from produtos');
+        $products = DB::select('select * from products');
         foreach ($products as $p) {
-            $html .= '<li> nome: ' . $p->nome . ',
-                        descricao: ' . $p->descricao . '</li>';
+            $html .= '<li> Name: ' . $p->name . ',
+                        Description: ' . $p->description . '</li>';
         }
         $html .= '</ul>';
         return $html;
