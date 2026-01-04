@@ -8,9 +8,9 @@ class CheckoutPayment
 {
     public function processPayment(float $amount, PaymentMethodContract $provider)
     {
-        $Response = $provider->chargePayment($amount);
+        $response = $provider->chargePayment($amount);
         echo '--- CHECKOUT REPORT ---' . PHP_EOL .
-            'Status: ' . $Response->status->value .
-            PHP_EOL . 'Value: ' . $Response->amount;
+            'Status: ' . $response->status->value .
+            PHP_EOL . 'Value: ' . $response->amount;
     }
 }
