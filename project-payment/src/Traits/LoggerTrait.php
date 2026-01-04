@@ -1,4 +1,7 @@
 <?php
+
+namespace App\Traits;
+
 trait LoggerTrait
 {
     function logMessage(string $msg)
