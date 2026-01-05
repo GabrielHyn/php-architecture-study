@@ -8,6 +8,6 @@ use App\Http\Controllers\PaymentController;
 use App\Http\Requests\StorePaymentRequest;
 
 $request = new StorePaymentRequest();
-$request->merge(['amount' => 500, 'payment_type' => 'paypal']);
+$request->merge(['amount' => 500, 'payment_type' => 'pix']);
 $paymentController = new PaymentController();
 echo $paymentController->store($request);
