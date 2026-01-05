@@ -15,7 +15,7 @@ class PaymentController
         if (!$paymentEnum) {
             return "Error: Invalid Payment Type";
         }
-        $provider = $paymentEnum->provider();
+        $provider = $paymentEnum->getProvider();
         $checkout = new CheckoutPayment();
         $checkout->processPayment($request->input('amount'), $provider);
 

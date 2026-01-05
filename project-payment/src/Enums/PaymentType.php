@@ -15,7 +15,7 @@ enum PaymentType: string
     case STRIPE = 'stripe';
     case FAKE = 'fake';
 
-    public function Provider(): PaymentMethodContract
+    public function getProvider(): PaymentMethodContract
     {
         return match ($this) {
             self::PAYPAL => new PaypalProvider(),
