@@ -11,6 +11,6 @@ class CheckoutPayment
         $response = $provider->chargePayment($amount);
         echo '--- CHECKOUT REPORT ---' . PHP_EOL .
             'Status: ' . $response->status->value .
-            PHP_EOL . 'Value: ' . $response->amount;
+            PHP_EOL . 'Value: ' . $response->amount . PHP_EOL;
     }
 }
