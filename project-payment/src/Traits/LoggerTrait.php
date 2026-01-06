@@ -4,8 +4,8 @@ namespace App\Traits;
 
 trait LoggerTrait
 {
-    function logMessage(string $msg)
+    public function logMessage(string $msg)
     {
-        echo "Log $msg" . PHP_EOL;
+        echo "Log $msg".PHP_EOL;
     }
 }

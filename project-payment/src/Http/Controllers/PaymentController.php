@@ -12,13 +12,13 @@ class PaymentController
     {
         $paymentEnum = PaymentType::tryFrom($request->input('payment_type'));
 
-        if (!$paymentEnum) {
-            return "Error: Invalid Payment Type";
+        if (! $paymentEnum) {
+            return 'Error: Invalid Payment Type';
         }
         $provider = $paymentEnum->getProvider();
-        $checkout = new CheckoutPayment();
+        $checkout = new CheckoutPayment;
         $checkout->processPayment($request->input('amount'), $provider);
 
-        return "Processed Payment!";
+        return 'Processed Payment!';
     }
 }
