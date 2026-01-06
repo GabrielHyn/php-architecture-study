@@ -18,10 +18,10 @@ enum PaymentType: string
     public function getProvider(): PaymentMethodContract
     {
         return match ($this) {
-            self::PAYPAL => new PaypalProvider(),
-            self::PIX => new PixProvider(),
-            self::STRIPE => new StripeProvider(),
-            self::FAKE => new FakeProvider(),
+            self::PAYPAL => new PaypalProvider,
+            self::PIX => new PixProvider,
+            self::STRIPE => new StripeProvider,
+            self::FAKE => new FakeProvider,
         };
     }
 }

@@ -41,22 +41,24 @@ class FormRequest
 
                 if (empty($value) && $value !== '0') {
                     $errors[$field] = "The field [{$field}] is required";
-                };
+                }
             } else {
                 echo "Dev Error: The rule [{$rule}] for field [{$field}] is not supported.";
-                die();
+                exit();
             }
         }
-        if (!empty($errors)) {
-            echo "<pre>";
+        if (! empty($errors)) {
+            echo '<pre>';
             print_r($errors);
-            echo "</pre>";
-            die();
+            echo '</pre>';
+            exit();
         }
     }
+
     public function validated(): array
     {
         $this->validate();
+
         return $this->data;
     }
 

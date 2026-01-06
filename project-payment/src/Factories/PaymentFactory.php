@@ -13,10 +13,10 @@ class PaymentFactory
     public static function make(string $type): ?PaymentMethodContract
     {
         return match ($type) {
-            'paypal' => new PaypalProvider(),
-            'pix' => new PixProvider(),
-            'stripe' => new StripeProvider(),
-            'fake' => new FakeProvider(),
+            'paypal' => new PaypalProvider,
+            'pix' => new PixProvider,
+            'stripe' => new StripeProvider,
+            'fake' => new FakeProvider,
             'default' => null,
         };
     }
