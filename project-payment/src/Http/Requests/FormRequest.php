@@ -26,8 +26,9 @@ class FormRequest
         return [];
     }
 
-    public function validate()
+    public function validate(): void
     {
+        $this->sanitize();
         $rules = $this->rules();
         $errors = [];
 
@@ -54,5 +55,14 @@ class FormRequest
     {
         $this->validate();
         return $this->data;
+    }
+
+    public function sanitize(): void
+    {
+        foreach ($this->data as $key => $value) {
+            if (is_string($value)) {
+                $this->data[$key] = trim($value);
+            }
+        }
     }
 }
