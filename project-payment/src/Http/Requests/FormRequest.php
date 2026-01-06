@@ -4,6 +4,9 @@ namespace App\Http\Requests;
 
 class FormRequest
 {
+    /**
+     * @var array<string, mixed>
+     */
     protected array $data = [];
 
     public function merge(array $newData): void
