@@ -37,6 +37,12 @@ src/
 
 🚀 How to run
 
+Prerequisites
+To run this project, you need PHP 8.3+ and the following extensions:
+
+* PHP 8.3+ (with `xml`, `mbstring`, and `zip` extensions)
+* Composer
+
 Clone the repo and install dependencies:
 
 ```
